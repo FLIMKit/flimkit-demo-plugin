@@ -1,0 +1,33 @@
+[build-system]
+requires = ['setuptools>=68']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'flimkit-demo-plugin'
+version = '0.1.0'
+description = 'A worked example of every FLIMKit add-on hook'
+readme = 'README.md'
+requires-python = '>=3.12'
+license = 'MIT'
+license-files = ['LICENSE.md']
+authors = [
+    {name = 'Alex Hunt', email = 'alexander.hunt@ed.ac.uk'},
+]
+keywords = ['FLIM', 'FLIMKit', 'plugin']
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+]
+dependencies = ['numpy']
+
+[project.urls]
+Homepage = 'https://github.com/FLIMKit/flimkit-demo-plugin'
+FLIMKit = 'https://github.com/FLIMKit/FLIMKit'
+
+[project.entry-points.'flimkit.plugins']
+demo = 'flimkit_demo_plugin'
+
+[tool.setuptools.packages.find]
+include = ['flimkit_demo_plugin*']
